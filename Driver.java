@@ -9,7 +9,10 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("hello");
-		/*String stID = "OKCE";
+		/*to write MesoAbstract.java, MesoInherit.java, PosAvg.java, and LetterAvg.java; 
+		 * 
+		 * 
+		 * String stID = "OKCE";
 		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 		
 		PosAvg posAvg = new PosAvg(stID);

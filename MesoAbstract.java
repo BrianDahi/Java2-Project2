@@ -8,5 +8,8 @@ public abstract class MesoAbstract
 	abstract int[] calAverage();
 
 	//TODO: Create an abstract method letterAverage with return type char
-	
+	/*MesoAbstract.java: You will create two abstract method calAverage() 
+	 * and letterAerage(). Return type of calAverage() should be an integer array and for 
+	 * letterAverage() is char.
+		int[] calAverage() and char letterAverage();*/
 }
