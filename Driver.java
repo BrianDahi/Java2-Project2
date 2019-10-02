@@ -9,10 +9,8 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("hello");
-		/*to write MesoAbstract.java, MesoInherit.java, PosAvg.java, and LetterAvg.java; 
-		 * 
-		 * 
-		 * String stID = "OKCE";
+		
+		  String stID = "OKCE";
 		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 		
 		PosAvg posAvg = new PosAvg(stID);
@@ -31,6 +29,6 @@ public class Driver
 		LetterAvg letterAvg = new LetterAvg(mesoInherit.letterAverage());
 		System.out.println("Total number of stations starting with letter '" + mesoInherit.letterAverage() + "' is " + letterAvg.numberOfStationWithLetterAvg() + ".");
 		
-		System.out.print(letterAvg);*/
+		System.out.print(letterAvg);
 	}
 }

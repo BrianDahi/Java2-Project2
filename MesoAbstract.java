@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 /**
  * @author Mohammad Mukhtaruzzaman
  * @version 2019-09-18
@@ -7,11 +11,12 @@ public abstract class MesoAbstract
 	//Abstract method calAverage to return integer array.
 	abstract int[] calAverage();
 	abstract char letterAverage();
+	ArrayList<String> meso = new ArrayList<String>();
 	
+	public void read(String fileName) throws IOException{
+		FileReader file = new FileReader("Mesonet.txt");
+		
+	}
 
-	//TODO: Create an abstract method letterAverage with return type char
-	/*MesoAbstract.java: You will create two abstract method calAverage() 
-	 * and letterAerage(). Return type of calAverage() should be an integer array and for 
-	 * letterAverage() is char.
-		int[] calAverage() and char letterAverage();*/
+
 }

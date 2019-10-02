@@ -12,6 +12,8 @@ public class MesoInherit extends MesoAbstract{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	//BufferReader in here
+	
 
 }
 /*MesoInherit.java: You need to write this class to generate intended output 
