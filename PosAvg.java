@@ -2,6 +2,9 @@
 public class PosAvg {
 // Constructors
 	String str;
+	MesoAbstract file = new MesoInherit();
+	
+	
 	public PosAvg() {
 		
 	}
