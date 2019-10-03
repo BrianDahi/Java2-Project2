@@ -9,10 +9,14 @@ public class PosAvg {
 		
 	}
 	public PosAvg(String str) {
+		// str = "OKCE";
 		this.str = str;
 	}
+	ReadFile temp = new ReadFile();
+	//String[] readArray =  String[ stringArray[] ];
 //method for index
 	public int indexOfStation() {
+		// 
 		int index = 0;
 		return index;
 	}

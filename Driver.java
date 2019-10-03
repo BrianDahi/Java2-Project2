@@ -9,8 +9,17 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("hello");
+		ReadFile  readFile = new ReadFile();
+		try{
+			readFile.read("Mesonet.txt");
+		}
+		catch(Exception e) {
+			System.out.println("wrong");
+		}
 		
-		  String stID = "OKCE";
+		readFile.displayFile();
+		
+		String stID = "OKCE";
 		//MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 		
 		PosAvg posAvg = new PosAvg(stID);
