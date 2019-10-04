@@ -9,7 +9,8 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("hello");
-		PosAvg  readFile = new PosAvg();
+		//String stID = "OKCE";
+		/*PosAvg  readFile = new PosAvg(stID);
 		try{
 			readFile.read("Mesonet.txt");
 		}
@@ -17,12 +18,27 @@ public class Driver
 			System.out.println("wrong");
 		}
 		
-		readFile.displayFile();
+		
+		
+		readFile.showString();
+		
+		System.out.println(readFile.indexOfStation());
+		//readFile.displayFile();*/
+		
+		
+		
 		
 		String stID = "OKCE";
 		//MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 		
 		PosAvg posAvg = new PosAvg(stID);
+		try{
+			posAvg.read("Mesonet.txt");
+		}
+		catch(Exception e) {
+			System.out.println("wrong");
+		}
+		
 		System.out.println("The Index of the city is: " + posAvg.indexOfStation());
 		System.out.println(posAvg);
 		System.out.print("\n");

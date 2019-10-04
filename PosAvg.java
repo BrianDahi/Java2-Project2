@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class PosAvg {
-	// Constructors
-	String str;
 
+
+	String str ;
 
 
 	public PosAvg() {
@@ -14,14 +14,48 @@ public class PosAvg {
 	}
 	public PosAvg(String str) {
 		// str = "OKCE";
+
 		this.str = str;
+
 	}
-	
+
+
+	public void showString() {
+		System.out.println(str);
+	}
 
 	//method for index
 	public int indexOfStation() {
-		//
 		int index = 0;
+		int distance = 0;
+		
+		
+		for(int i = 0; i < fileList.size(); ++i) {
+			
+			String temp = fileList.get(i);
+			for(int j = 0; j < str.length(); ++j) {
+				if(str.charAt(j) != temp.charAt(j)) {
+					distance += 1 ;
+				}
+				
+			}
+			
+			if(distance == 0) {
+				//System.out.println(i);
+				return index = i +1;
+			}
+			distance = 0;
+			
+		}	
+			
+			
+			
+			/*if(str.equals(temp)) {
+				System.out.println(i);
+				index = i;
+			}*/
+		
+
 		return index;
 	}
 
@@ -36,12 +70,12 @@ public class PosAvg {
 		String info;
 		BufferedReader br = new BufferedReader(file);
 
-		info = br.readLine();
-		info = br.readLine();
-		info = br.readLine();
-		
+		//info = br.readLine();
+		//info = br.readLine();
+		//info = br.readLine();
+
 		String parse = "";
-		int i= 0;
+
 		info = br.readLine();
 		while(info != null ) {
 
@@ -54,7 +88,7 @@ public class PosAvg {
 		br.close();
 	}
 	public void displayFile() {
-	
+
 		System.out.println("this is arrayList");
 		for(int i = 0 ; i < fileList.size() ; ++i) {
 			System.out.println(fileList.get(i));
