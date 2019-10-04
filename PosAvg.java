@@ -28,35 +28,36 @@ public class PosAvg {
 	public int indexOfStation() {
 		int index = 0;
 		int distance = 0;
-		
-		
 		for(int i = 0; i < fileList.size(); ++i) {
-			
 			String temp = fileList.get(i);
 			for(int j = 0; j < str.length(); ++j) {
 				if(str.charAt(j) != temp.charAt(j)) {
-					distance += 1 ;
+					distance ++ ;
 				}
-				
+
 			}
-			
+
 			if(distance == 0) {
-				//System.out.println(i);
-				return index = i +1;
+				return index = i + 1 ;
 			}
 			distance = 0;
-			
-		}	
-			
-			
-			
-			/*if(str.equals(temp)) {
-				System.out.println(i);
-				index = i;
-			}*/
-		
 
-		return index;
+		}	
+		return 0;
+	}
+
+	public String toString() {
+
+		String city3 = fileList.get(indexOfStation() + 1);
+
+		String city4 = fileList.get(indexOfStation() - 3);
+		String city1 = fileList.get(indexOfStation() );
+
+		String city2 = fileList.get(indexOfStation() - 2);
+		//This index is average of NOWA and OILT, NEWP and OKCE, and so on.
+
+		return		String.format("This index is average of %s and %s, %s and %s, and so on.\n",
+				city1,city2,city3,city4);
 	}
 
 
