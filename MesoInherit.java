@@ -1,7 +1,16 @@
 
 public class MesoInherit extends MesoAbstract{
 
-	@Override
+	String str;
+	public MesoInherit() {
+		
+	}
+	
+	public MesoInherit(MesoStation mesoStation) {
+		str = mesoStation.getStID();
+		
+	}
+	
 	int[] calAverage() {
 		// TODO Auto-generated method stub
 		return null;
@@ -12,10 +21,8 @@ public class MesoInherit extends MesoAbstract{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	//BufferReader in here
+	
 	
 
 }
-/*MesoInherit.java: You need to write this class to generate intended output 
- * 
- * from line 3 to line 6. Here, you must inherit the abstract class/method as necessary.*/
+

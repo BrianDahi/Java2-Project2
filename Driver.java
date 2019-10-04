@@ -29,7 +29,9 @@ public class Driver
 		
 		
 		String stID = "OKCE";
-		//MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
+		
+		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
+		//System.out.println(mesoInherit);
 		
 		PosAvg posAvg = new PosAvg(stID);
 		try{
@@ -42,7 +44,7 @@ public class Driver
 		System.out.println("The Index of the city is: " + posAvg.indexOfStation());
 		System.out.println(posAvg);
 		System.out.print("\n");
-		//posAvg.avg();
+		
 		/*System.out.println("Ascii Ceiling is " + mesoInherit.calAverage()[0]);
 		System.out.println("Ascii Floor is " + mesoInherit.calAverage()[1]);
 		System.out.println("Ascii Average is " + mesoInherit.calAverage()[2]);

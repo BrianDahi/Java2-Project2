@@ -13,8 +13,6 @@ public class PosAvg {
 
 	}
 	public PosAvg(String str) {
-		// str = "OKCE";
-
 		this.str = str;
 
 	}
@@ -51,13 +49,15 @@ public class PosAvg {
 		String city3 = fileList.get(indexOfStation() + 1);
 
 		String city4 = fileList.get(indexOfStation() - 3);
+		
 		String city1 = fileList.get(indexOfStation() );
 
 		String city2 = fileList.get(indexOfStation() - 2);
 		//This index is average of NOWA and OILT, NEWP and OKCE, and so on.
 
-		return		String.format("This index is average of %s and %s, %s and %s, and so on.\n",
-				city1,city2,city3,city4);
+		return	String.format("This index is average of %s and %s, %s and %s, and so on.\n",
+				city2,city1,city4,city3);
+		
 	}
 
 
