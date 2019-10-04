@@ -9,7 +9,7 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("hello");
-		ReadFile  readFile = new ReadFile();
+		PosAvg  readFile = new PosAvg();
 		try{
 			readFile.read("Mesonet.txt");
 		}
