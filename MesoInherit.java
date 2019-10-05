@@ -31,11 +31,13 @@ public class MesoInherit extends MesoAbstract{
 		int floorInt = (int)floor;
 		int avgInt = (int)avg;
 		
-		int[] intArray = new int[2] ;
+		int[] intArray = new int[3] ;
 		
+		intArray[0] = ceilingInt;
+		intArray[1] = floorInt;
+		intArray[2] = avgInt;
 		
-		
-		return new int [1];
+		return intArray;
 		
 		
 		
@@ -43,8 +45,9 @@ public class MesoInherit extends MesoAbstract{
 
 	@Override
 	char letterAverage() {
-		// TODO Auto-generated method stub
-		return 0;
+		return  (char)calAverage()[2];
+		
+		
 	}
 	
 	
