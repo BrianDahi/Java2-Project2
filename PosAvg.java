@@ -71,5 +71,9 @@ public class PosAvg {
 		}
 		br.close();
 	}
+	public ArrayList<String> getArrayList() {
+		
+		return fileList;
+	}
 
 }

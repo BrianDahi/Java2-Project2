@@ -34,12 +34,15 @@ public class Driver
 		
 		
 		PosAvg posAvg = new PosAvg(stID);
+		
 		try{
 			posAvg.read("Mesonet.txt");
 		}
 		catch(Exception e) {
 			System.out.println("wrong");
 		}
+		
+		
 		
 		System.out.println("The Index of the city is: " + posAvg.indexOfStation());
 		System.out.println(posAvg);
