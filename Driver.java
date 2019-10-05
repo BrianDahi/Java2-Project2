@@ -8,22 +8,7 @@ public class Driver
 {
 	public static void main(String[] args) throws IOException 
 	{
-		System.out.println("hello");
-		//String stID = "OKCE";
-		/*PosAvg  readFile = new PosAvg(stID);
-		try{
-			readFile.read("Mesonet.txt");
-		}
-		catch(Exception e) {
-			System.out.println("wrong");
-		}
-		
-		
-		
-		readFile.showString();
-		
-		System.out.println(readFile.indexOfStation());
-		//readFile.displayFile();*/
+	
 		
 		
 		
@@ -57,10 +42,10 @@ public class Driver
 		System.out.print("\n");
 		
 		LetterAvg letterAvg = new LetterAvg(mesoInherit.letterAverage());
-		//letterAvg.numberOfStationWithLetterAvg();
+		
 		
 		System.out.println("Total number of stations starting with letter '" + mesoInherit.letterAverage() + "' is " + letterAvg.numberOfStationWithLetterAvg() + ".");
 		
-		//System.out.print(letterAvg);*/
+		System.out.print(letterAvg);
 	}
 }
