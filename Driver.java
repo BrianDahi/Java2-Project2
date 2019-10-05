@@ -31,7 +31,7 @@ public class Driver
 		String stID = "OKCE";
 		
 		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
-		//System.out.println(mesoInherit);
+		
 		
 		PosAvg posAvg = new PosAvg(stID);
 		try{
@@ -53,7 +53,9 @@ public class Driver
 		System.out.println("Letter Avg: " + mesoInherit.letterAverage());
 		System.out.print("\n");
 		
-		//LetterAvg letterAvg = new LetterAvg(mesoInherit.letterAverage());
+		LetterAvg letterAvg = new LetterAvg(mesoInherit.letterAverage());
+		letterAvg.numberOfStationWithLetterAvg();
+		
 		//System.out.println("Total number of stations starting with letter '" + mesoInherit.letterAverage() + "' is " + letterAvg.numberOfStationWithLetterAvg() + ".");
 		
 		//System.out.print(letterAvg);*/

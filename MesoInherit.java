@@ -18,10 +18,7 @@ public class MesoInherit extends MesoAbstract{
 		char c = str.charAt(2);
 		char d = str.charAt(3);
 		
-		/*int numa = (int)a;
-		int numb = (int)b;
-		int numc = (int)c;
-		int numd = (int)d;*/
+		
 		double num = (a + b + c + d)/4.0;
 		double ceiling = Math.ceil(num);
 		double floor = Math.floor(num);
