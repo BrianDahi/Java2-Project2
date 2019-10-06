@@ -35,10 +35,7 @@ public class MesoInherit extends MesoAbstract{
 		intArray[2] = avgInt;
 		
 		return intArray;
-		
-		
-		
-}
+	}
 
 	@Override
 	char letterAverage() {

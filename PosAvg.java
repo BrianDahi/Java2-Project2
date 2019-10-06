@@ -15,36 +15,29 @@ public class PosAvg {
 
 	}
 	public int indexOfStation() {
+		String temp = "";
 		int index = 0;
-		int distance = 0;
 		for(int i = 0; i < fileList.size(); ++i) {
-			String temp = fileList.get(i);
-			for(int j = 0; j < str.length(); ++j) {
-				if(str.charAt(j) != temp.charAt(j)) {
-					distance ++ ;
-				}
-
+			temp = fileList.get(i);
+			if(str.equals(temp)) {
+				index =fileList.indexOf(temp);
 			}
-
-			if(distance == 0) {
-				return index = i + 1 ;
-			}
-			distance = 0;
-
-		}	
-		return 0;
+		}
+		return index;
+		
+	
 	}
 
 	public String toString() {
 
-		String city3 = fileList.get(indexOfStation() + 1);
+		String city1 = fileList.get(indexOfStation() + 1);
 
-		String city4 = fileList.get(indexOfStation() - 3);
+		String city2 = fileList.get(indexOfStation() - 1);
 
-		String city1 = fileList.get(indexOfStation() );
+		String city3 = fileList.get(indexOfStation() + 2 );
 
-		String city2 = fileList.get(indexOfStation() - 2);
-		//This index is average of NOWA and OILT, NEWP and OKCE, and so on.
+		String city4 = fileList.get(indexOfStation() - 2);
+		
 
 		return	String.format("This index is average of %s and %s, %s and %s, and so on.\n",
 				city2,city1,city4,city3);
@@ -60,6 +53,7 @@ public class PosAvg {
 		BufferedReader br = new BufferedReader(file);
 		String parse = "";
 
+		
 		info = br.readLine();
 		while(info != null ) {
 
