@@ -12,11 +12,14 @@ public class PosAvg {
 	}
 	public PosAvg(String str) {
 		this.str = str;
-
+		indexOfStation();
+		 
 	}
+	
 	public int indexOfStation() {
 		String temp = "";
 		int index = 0;
+		try {
 		for(int i = 0; i < fileList.size(); ++i) {
 			temp = fileList.get(i);
 			if(str.equals(temp)) {
@@ -24,12 +27,16 @@ public class PosAvg {
 			}
 		}
 		return index;
-		
+		}catch(Exception e ) {
+			System.out.println("Error in indeofStation!!");
+		}
+		return index;
 	
 	}
+	
 
 	public String toString() {
-
+		
 		String city1 = fileList.get(indexOfStation() + 1);
 
 		String city2 = fileList.get(indexOfStation() - 1);
@@ -38,13 +45,13 @@ public class PosAvg {
 
 		String city4 = fileList.get(indexOfStation() - 2);
 		
-
-		return	String.format("This index is average of %s and %s, %s and %s, and so on.\n",
+		return	String.format("This index is average of %s and %s, %s and %s, and so on.",
 				city2,city1,city4,city3);
-
 	}
+	
 	ArrayList<String> fileList = new ArrayList<String>();
-	public void read(String filename) throws IOException{
+	
+	public void read() throws IOException{
 		// creating object for FileReader and taking in .txt
 
 		FileReader file = new FileReader("Mesonet.txt");
@@ -52,9 +59,11 @@ public class PosAvg {
 		String info;
 		BufferedReader br = new BufferedReader(file);
 		String parse = "";
-
+//since mesonet doesnt start at zero I added a space.
+		fileList.add("zero");
 		
 		info = br.readLine();
+		
 		while(info != null ) {
 
 			
@@ -64,6 +73,7 @@ public class PosAvg {
 			info = br.readLine();
 		}
 		br.close();
+
 	}
 	public ArrayList<String> getArrayList() {
 		

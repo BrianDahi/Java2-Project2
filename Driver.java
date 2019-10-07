@@ -17,7 +17,7 @@ public class Driver
 		PosAvg posAvg = new PosAvg(stID);
 		
 		try{
-			posAvg.read("Mesonet.txt");
+			posAvg.read();
 		}
 		catch(Exception e) {
 			System.out.println("wrong");

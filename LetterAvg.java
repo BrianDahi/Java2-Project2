@@ -29,7 +29,7 @@ public class LetterAvg {
 
 		PosAvg p = new PosAvg();
 		try{
-			p.read("Mesonet.txt");
+			p.read();
 		}
 		catch(Exception e) {
 			System.out.println("wrong");
