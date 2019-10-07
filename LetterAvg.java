@@ -9,22 +9,20 @@ public class LetterAvg {
 	}
 	public LetterAvg(char c) {
 		this.c = c;
-	}
-	
-	/*public void arrayListCopy() {
 		PosAvg p = new PosAvg();
 		try{
-			p.read("Mesonet.txt");
+			p.read();
 		}
 		catch(Exception e) {
 			System.out.println("wrong");
 		}
-		int counter = 0;
-		ArrayList<String> tempArray = p.getArrayList();
-		ArrayList<String> match = new ArrayList<String>();
-	}*/
-	
+		
+	}
+
+
+
 	ArrayList<String> match = new ArrayList<String>();
+	
 	public int numberOfStationWithLetterAvg() {
 
 		PosAvg p = new PosAvg();
@@ -35,8 +33,9 @@ public class LetterAvg {
 			System.out.println("wrong");
 		}
 		int counter = 0;
-
+//this temp arrayList will take the ArrayList from PosAvg
 		ArrayList<String> tempArray = p.getArrayList();
+
 		for(int i = 0; i < tempArray.size(); ++i) {
 
 			String tempString = tempArray.get(i);
@@ -50,8 +49,9 @@ public class LetterAvg {
 		return counter;
 	}
 	public String toString() {
+		// .join will concat the array.
 		String str = String.join("\n", match);
-	return String.format("They are:\n%s", str);
+		return String.format("\nThey are:\n%s", str);
 	}
 }
 
