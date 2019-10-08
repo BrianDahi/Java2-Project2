@@ -17,6 +17,7 @@ public class LetterAvg {
 			System.out.println("wrong");
 		}
 		
+		
 	}
 
 
@@ -44,14 +45,21 @@ public class LetterAvg {
 				++counter;
 				match.add(tempString);
 			}
+			
 		}
 
 		return counter;
 	}
 	public String toString() {
 		// .join will concat the array.
-		String str = String.join("\n", match);
-		return String.format("\nThey are:\n%s", str);
+		int x = numberOfStationWithLetterAvg();
+		String str = "\nThey are:";
+		
+				for(int i = 0; i< x ; ++i) {
+					str += "\n"+ match.get(i);
+				}
+		
+		return str;
 	}
 }
 

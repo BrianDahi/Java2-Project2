@@ -1,4 +1,5 @@
 /**
+
  * @author Mohammad Mukhtaruzzaman
  * @version 2019-09-18
 */
@@ -15,7 +16,7 @@ public class Driver
 		
 		
 		PosAvg posAvg = new PosAvg(stID);
-	
+		//posAvg.indexAvg();
 		System.out.println("The Index of the city is: " + posAvg.indexOfStation() );
 		System.out.println(posAvg);
 		System.out.print("\n");
