@@ -13,8 +13,7 @@ public class PosAvg {
 	}
 	public PosAvg(String str) {
 		this.str = str;
-		//indexAvg();
-		//indexOfStation();
+		
 
 		try{
 			read();
@@ -26,7 +25,7 @@ public class PosAvg {
 		
 	}
 
-	//private int privateIndex;
+	
 
 	public int indexOfStation() {
 		String temp = "";
@@ -45,7 +44,7 @@ public class PosAvg {
 	public String toString() {
 		
 		int privateIndex = indexOfStation();
-		//ArrayList<String> temp = getArrayList();
+		
 		String city1 = fileList.get(privateIndex );
 		
 		String city2 = fileList.get(privateIndex - 2);
@@ -53,35 +52,11 @@ public class PosAvg {
 		String city3 = fileList.get(privateIndex + 1);
 
 		String city4 = fileList.get(privateIndex - 3);
-		// NOWA and OILT, NEWP and OKCE, and so on.
-		//return String.format("This index is average of %s and %s, %s and %s, and so on.",
-		//		indexAvg()[1],indexAvg()[0],indexAvg()[2],indexAvg()[3]);
 		
-	
 		return	String.format("This index is average of %s and %s, %s and %s, and so on.",
 			city2,city1,city4,city3);
 	}
-//This index is average of OILT and OKEM, NRMN and OKMU, and so on.
-	/*public String[] indexAvg() {
-		String[] indexAvg = new String [4];
-		//String temp;
-		int privateIndex = indexOfStation();
-		//System.out.println("YOOOOOO" + (privateIndex + 1));
-		
-		temp1 = fileList.get(privateIndex + 0);
-		indexAvg[0] = temp1;
-		// NOWA and OILT, NEWP and OKCE, and so on.
-		temp2 = fileList.get(privateIndex - 2);
-		indexAvg[1] = temp2;
-		
-		temp3 = fileList.get(privateIndex + 2);
-		indexAvg[2] = temp3;
-		
-		temp4 = fileList.get(privateIndex - 2);
-		indexAvg[3] = temp4;
-		
-		return indexAvg;
-	}*/
+
 	ArrayList<String> fileList = new ArrayList<String>();
 
 	public void read() throws IOException{
@@ -94,7 +69,7 @@ public class PosAvg {
 		String parse = "";
 		//since mesonet doesnt start at zero I added a space.
 
-		//fileList.add("zero");
+		
 
 		info = br.readLine();
 		info = br.readLine();
