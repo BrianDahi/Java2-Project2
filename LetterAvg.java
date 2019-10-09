@@ -52,13 +52,21 @@ public class LetterAvg {
 	}
 	public String toString() {
 		// .join will concat the array.
-		int x = numberOfStationWithLetterAvg();
+		//int x = numberOfStationWithLetterAvg();
 		String str = "\nThey are:";
 		
-				for(int i = 0; i< x ; ++i) {
+				/*for(int i = 0; i< x ; ++i) {
 					str += "\n"+ match.get(i);
-				}
+				}*/
 		
+		//return str;
+	
+		
+		
+		for(int i = 0; i < match.size(); ++i)
+		{
+			str = str + "\n" + match.get(i);
+		}
 		return str;
 	}
 }
