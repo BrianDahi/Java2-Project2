@@ -26,6 +26,7 @@ public class PosAvg {
 	}
 
 	
+//Int this method we are searching for the index of the given String from the Driver
 
 	public int indexOfStation() {
 		String temp = "";
@@ -35,11 +36,12 @@ public class PosAvg {
 			temp = fileList.get(i);
 			if(str.equals(temp)) {
 				index =fileList.indexOf(temp);
-				//System.out.println(index);
+				
 			}
 		}
 		return index + 1;
 	}
+//The toString method needs to return in the format of a few averages 
 
 	public String toString() {
 		
@@ -67,19 +69,14 @@ public class PosAvg {
 		String info;
 		BufferedReader br = new BufferedReader(file);
 		String parse = "";
-		//since mesonet doesnt start at zero I added a space.
-
 		
-
 		info = br.readLine();
 		info = br.readLine();
 		info = br.readLine();
 		info = br.readLine();
 		while(info != null ) {
-
-
 			parse =  (String) info.subSequence(1,5);
-			//System.out.println(parse);
+			
 			fileList.add(parse);
 			info = br.readLine();
 		}
